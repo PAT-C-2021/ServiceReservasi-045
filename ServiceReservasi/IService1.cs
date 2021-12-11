@@ -8,13 +8,13 @@ using System.Text;
 namespace ServiceReservasi
 {
     [DataContract]
-    public class Pemesanan //menampilkan detail lokasi
+    public class Pemesanan //create
     {
         [DataMember]
-        public string IDPemesanan { get; set; } //variabel dari public class
+        public string IDPemesanan { get; set; }
 
         [DataMember]
-        public string NamaCustomer { get; set; }
+        public string NamaCustomer { get; set; } //method
 
         [DataMember]
         public string NoTelpon { get; set; }
@@ -23,7 +23,7 @@ namespace ServiceReservasi
         public int JumlahPemesanan { get; set; }
 
         [DataMember]
-        public string IDLokasi { get; set; }
+        public string Lokasi { get; set; }
 
     }
     [DataContract]
@@ -63,7 +63,7 @@ namespace ServiceReservasi
         string pemesanan(string IDPemesanan, string NamaCustomer, string NoTelpon, int JumlahPemesanan, string IDLokasi); //method //proses input data
 
         [OperationContract]
-        string editPemesanan(string IDPemesanan, string Namacustomer);
+        string editPemesanan(string IDPemesanan, string Namacustomer, string No_telpon);
 
         [OperationContract]
         string deletePemesanan(string IDPemesanan);
